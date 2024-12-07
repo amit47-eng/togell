@@ -24,6 +24,8 @@ function Form() {
 
   console.log(">>", records);
   return (
+    <div className="container">
+      <h1>Login/SignIn</h1>
     <form onSubmit={handleSubmit}>
       <input
         name="username"
@@ -39,6 +41,7 @@ function Form() {
       />
       <button>Submit</button>
     </form>
+    </div>
   );
 }
 export default Form;
