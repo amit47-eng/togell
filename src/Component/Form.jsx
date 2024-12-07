@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./style/Form.css"
 
 function Form() {
   const [details, setDetails] = useState({ username: "", password: "" });
@@ -25,7 +26,9 @@ function Form() {
   console.log(">>", records);
   return (
     <div className="container">
+      <div className="container1">
       <h1>Login/SignIn</h1>
+      <hr />
     <form onSubmit={handleSubmit}>
       <input
         name="username"
@@ -33,14 +36,17 @@ function Form() {
         placeholder="username"
         onChange={handleChange}
       />
+      <br />
       <input
         name="password"
         type="password"
         placeholder="Passowrd"
         onChange={handleChange}
       />
-      <button>Submit</button>
+      <br />
+      <button className="submit">Submit</button>
     </form>
+    </div>
     </div>
   );
 }
